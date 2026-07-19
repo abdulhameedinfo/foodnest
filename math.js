@@ -1,18 +1,16 @@
-const pi = 3.14;
+export const pi = 3.14;
 
-function subtract(a, b)
+export function subtract(a, b)
 {
     return b-a;
 }
 
-function add(a, b)
+export function add(a, b)
 {
     return a + b;
 }
 
-module.exports =
+export function multiply(a, b)
 {
-    subtract,
-    add,
-    pi
+    return a * b;
 }

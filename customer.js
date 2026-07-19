@@ -1,4 +1,4 @@
-class customer
+export default class customer
 {
     getCustomerId()
     {
@@ -7,5 +7,3 @@ class customer
         return id;
     }
 }
-
-module.exports = customer;
