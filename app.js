@@ -1,24 +1,21 @@
 const express = require("express");
 
-const app2 = express();
+const app = express();
 
-app2.get("/", (req, res) => {
+const math = require("./math");
+const customer = require("./customer");
+
+app.get("/", (req, res) => {
     res.send("Hello World");
 });
 
-app2.listen(3000, () => {
-    console.log("Server running on port 3000");
-
-
-    const simpleArray =
-        [7, 8, 9];
-
-    const matrix = [
-        [1, 2, 3], // Row 0
-        [4, 5, 6], // Row 1
-        [7, 8, 9]  // Row 2
-    ];
-
-    console.log(matrix[1][2]);
+app.listen(3000, () => {
+    //console.log("Server running on port 3000");
+    // var result = math.subtract(10, 20);
+    // console.log(result);
+    // console.log('pi values is ' + math.pi);
+    const c = new customer();
+    console.log(c.getCustomerId());
+    
 });
 
